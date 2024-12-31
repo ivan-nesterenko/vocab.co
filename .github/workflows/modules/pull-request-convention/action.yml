@@ -1,0 +1,11 @@
+name: Pull Request Convention
+description: Checking pull request style convention
+
+runs:
+  using: 'composite'
+  steps:
+    - name: Pull Request Checks
+      uses: maximbircu/pull-request-checkstyle@v1.0.0
+      with:
+        commit-message-title-regex: "^(feat|fix|ref): [A-Z][a-z0-9\\s_-]*"
+        branch-name-regex: '^(feat|fix|ref)/[a-z0-9]+(-[a-z0-9]+)*$'

@@ -1,0 +1,14 @@
+name: Install Node.js
+description: Install Node.js
+
+runs:
+  using: 'composite'
+  steps:
+    - name: Install Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: 20
+
+    - name: Enable corepack
+      shell: bash
+      run: corepack enable

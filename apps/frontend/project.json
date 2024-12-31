@@ -1,9 +1,9 @@
 {
-  "name": "vocab.co",
+  "name": "frontend",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "apps/vocab.co",
+  "sourceRoot": "apps/frontend",
   "projectType": "application",
   "tags": [],
-  "// targets": "to see all targets run: nx show project vocab.co --web",
+  "// targets": "to see all targets run: nx show project frontend --web",
   "targets": {}
 }

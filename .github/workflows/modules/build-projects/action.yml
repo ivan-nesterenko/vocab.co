@@ -1,0 +1,15 @@
+name: Build projects
+description: Build projects
+
+runs:
+  using: 'composite'
+  steps:
+    - name: Install Node.js
+      uses: ./.github/workflows/utils/setup-node
+
+    - name: Install dependencies
+      uses: ./.github/workflows/modules/install-dependencies
+
+    - name: Build
+      shell: bash
+      run: yarn build

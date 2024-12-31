@@ -1,0 +1,40 @@
+name: Code checks
+
+on:
+  pull_request:
+    branches: [test/github-actions]
+
+jobs:
+  pull_request_checks:
+    runs-on: ubuntu-latest
+    name: 'Pull Request Checks'
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Pull Request Check
+        uses: ./.github/workflows/modules/pull-request-convention
+
+  linting:
+    permissions:
+      contents: write
+    runs-on: ubuntu-latest
+    name: 'Linting'
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Linting
+        uses: ./.github/workflows/modules/lint
+        with:
+          auto_commit_message: Automated lint fix
+
+  build_projects:
+    runs-on: ubuntu-latest
+    name: 'Build Projects'
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Build projects
+        uses: ./.github/workflows/modules/build-projects
