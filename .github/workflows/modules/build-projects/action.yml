@@ -12,4 +12,4 @@ runs:
 
     - name: Build
       shell: bash
-      run: yarn build
+      run: npm run build

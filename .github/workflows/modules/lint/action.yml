@@ -12,11 +12,11 @@ runs:
 
     - name: Prettier
       shell: bash
-      run: npm run build prettier:fix
+      run: npm run prettier:fix
 
     - name: Lint
       shell: bash
-      run: npm run build lint:fix
+      run: npm run lint:fix
 
     - name: Auto commit
       uses: ./.github/workflows/utils/auto-commit
