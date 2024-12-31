@@ -2,7 +2,11 @@
   "name": "@vocab.co/source",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "lint:fix": "echo test lint",
+    "prettier:fix": "echo test prettier",
+    "build": "echo test build"
+  },
   "private": true,
   "dependencies": {
     "@nestjs/common": "^10.0.2",
