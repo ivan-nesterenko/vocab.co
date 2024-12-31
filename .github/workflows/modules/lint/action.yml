@@ -20,5 +20,3 @@ runs:
 
     - name: Auto commit
       uses: ./.github/workflows/utils/auto-commit
-      with:
-        message: 'fix: Lint/Prettier'
