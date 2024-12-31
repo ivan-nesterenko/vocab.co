@@ -4,7 +4,8 @@
   "license": "MIT",
   "scripts": {
     "lint:fix": "echo test lint",
-    "prettier:fix": "echo test prettier"
+    "prettier:fix": "echo test prettier",
+    "build": "echo test build"
   },
   "private": true,
   "dependencies": {
